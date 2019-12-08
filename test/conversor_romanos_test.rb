@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative '../lib/conversor_romanos'
 
 class ConversorRomanosTest < Minitest::Test
   def setup
-    @conversor = ConversorIntToRomanos.new
+    @conversor = Conversores::ConversorIntToRomanos.new
   end
 
   def test_1_igual_I
