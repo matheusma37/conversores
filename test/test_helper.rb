@@ -4,7 +4,7 @@ require 'simplecov'
 SimpleCov.start do
   minimum_coverage 98
   add_filter '/test/'
-end
+end if ENV['COVERAGE']
 
 require 'minitest/spec'
 require 'minitest/autorun'
