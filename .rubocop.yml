@@ -1,0 +1,22 @@
+# This is the configuration used to check the rubocop source code.
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'test/*'
+    - 'lib/tasks/*'
+  TargetRubyVersion: 2.7
+  SuggestExtensions: false
+
+Naming/MethodName:
+  Exclude:
+    - 'test/**/*'
+    - 'lib/tasks/*'
+
+Naming/VariableNumber:
+  Exclude:
+    - 'test/**/*'
+    - 'lib/tasks/*'
+
+Style/Documentation:
+  Enabled: false
