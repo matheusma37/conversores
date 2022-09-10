@@ -1,0 +1,9 @@
+version: '3'
+services:
+  conversores:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: conversores
+    volumes:
+      - .:/opt/app
