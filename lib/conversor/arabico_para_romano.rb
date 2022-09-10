@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-# Modulo de conversores
-module Conversores
-  # Converte inteiros em romanos
-  class ConversorIntParaRomanos
+module Conversor
+  class ArabicoParaRomano
     VALORES_BASE = {
       1 => 'I',
       5 => 'V',
@@ -47,29 +45,6 @@ module Conversores
           VALORES_BASE[KEYS[atual]] * quociente
         end
       [romano, resto]
-    end
-  end
-
-  class ConversorRomanosParaInt
-    VALORES_BASE = {
-      'I' => 1,
-      'V' => 5,
-      'X' => 10,
-      'L' => 50,
-      'C' => 100,
-      'D' => 500,
-      'M' => 1000
-    }.freeze
-
-    def converter(romano)
-      return VALORES_BASE[romano] unless VALORES_BASE[romano].nil?
-
-      valor = 0
-      if !romano.nil? && !romano.empty?
-        romanos = romano.split('')
-        valor += romanos.size * VALORES_BASE[romanos[0]]
-      end
-      valor
     end
   end
 end
